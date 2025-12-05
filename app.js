@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
+const bcrypt = require('bcrypt');
+
 
 
 
@@ -9,6 +12,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const personerRouter = require('./routes/personer');
 const bilerRouter = require('./routes/biler');
+const loginRouter = require('./routes/login');
 
 const app = express();
 
@@ -22,5 +26,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/personer', personerRouter);
 app.use('/biler', bilerRouter);
+app.use('/login', loginRouter);
 
 module.exports = app;

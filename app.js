@@ -15,6 +15,7 @@ const bilerRouter = require('./routes/biler');
 const loginRouter = require('./routes/login');
 const beskyttetRouter = require('./routes/beskyttet');
 const logoutRouter = require('./routes/logout');
+const signinRouter = require('./routes/signin');
 
 const app = express();
 
@@ -40,5 +41,6 @@ app.use('/biler', bilerRouter);
 app.use('/login', loginRouter);
 app.use('/beskyttet', beskyttetRouter);
 app.use('/logout', logoutRouter);
+app.use('/signin', signinRouter);
 
 module.exports = app;

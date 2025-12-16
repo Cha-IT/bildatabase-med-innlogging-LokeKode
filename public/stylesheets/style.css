@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+.signinForm {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.fill {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
